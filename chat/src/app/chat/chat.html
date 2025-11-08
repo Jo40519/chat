@@ -1,0 +1,18 @@
+<p-card header="Simple Card">
+  <ng-template pTemplate="body">
+      <div class="chat-card">
+      <app-balao-chat [mensagens]="mensagens"></app-balao-chat>
+    </div>
+    </ng-template>
+  <ng-template pTemplate="footer">
+    <form [formGroup]="formChat">
+      <input
+        (keyup.enter)="enviarMensagem(formChat.controls['mensagem'].value!)"
+        type="text"
+        formControlName="mensagem"
+        pInputText
+        fluid
+      />
+    </form>
+  </ng-template>
+</p-card>

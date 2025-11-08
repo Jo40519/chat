@@ -1,0 +1,17 @@
+
+.bubble-card {
+  border-radius: 16px;
+  max-width: 40%;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+  box-shadow: none;
+  margin-top: 20px;
+}
+
+.bubble-card.from-me {
+  background-color: var(--p-primary-color);
+  color: white;
+  margin-left: auto;
+}

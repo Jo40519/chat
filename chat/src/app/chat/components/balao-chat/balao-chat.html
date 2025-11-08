@@ -1,0 +1,7 @@
+@for (item of mensagens; track $index) {
+<p-card class="p-2 mb-2 mt-2 fadein animation-duration-1000" class="bubble-card" [ngClass]="{ 'from-me': true }">
+  <ng-template pTemplate="body">
+    <p>{{ item }}</p>
+  </ng-template>
+</p-card>
+}
