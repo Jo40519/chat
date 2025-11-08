@@ -11,10 +11,12 @@ import { AppRoutingModule } from './app-routing-module';
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { App } from './app';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [App],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, CommonModule, AppRoutingModule],
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
@@ -38,6 +40,7 @@ import { App } from './app';
       })
     ),
     provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore())
   ],
   bootstrap: [App],
 })

@@ -1,7 +1,6 @@
 import { inject } from '@angular/core';
 import { Auth, onAuthStateChanged } from '@angular/fire/auth';
-import { CanActivateFn } from '@angular/router';
-import { Router } from 'express';
+import { CanActivateFn, Router } from '@angular/router';
 
 export const autenticacaoGuardGuard: CanActivateFn = (route, state) => {
    const auth = inject(Auth);
